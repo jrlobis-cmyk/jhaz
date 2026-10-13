@@ -14,7 +14,7 @@ export const CONFIG = {
   // TESTING AID. While true, an error on the last page also shows the technical
   // reason (for example "400 The recipient address is empty"). Set it to false
   // before you send the link to Jazlee, so she never sees technical text.
-  debug: true,
+  debug: false,
 
   // The Yes/No response form sends its email through EmailJS using these.
   emailjs: {
