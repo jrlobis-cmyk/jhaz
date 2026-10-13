@@ -20,7 +20,7 @@ export const CONFIG = {
   emailjs: {
     publicKey: "TCNMcpyHXtZGyKyb1",
     serviceId: "service_0dxcyrj",
-    templateId: "template_8w57rrd",
+    templateId: "template_m85ells",
   },
 
   // Background music: "14" by Silent Sanctuary, played through Spotify's own player.
