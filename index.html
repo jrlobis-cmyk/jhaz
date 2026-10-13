@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>For Jazlee</title>
+  <meta name="theme-color" content="#E9DDFB">
+  <!-- Asks search engines not to list the page. This is NOT privacy: anyone with the link can open it. -->
+  <meta name="robots" content="noindex, nofollow">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Decorative drifting petals (CSS only, hidden from screen readers) -->
+  <div class="petals" aria-hidden="true">
+    <span style="--x: 6%;  --s: 14px; --d: 26s; --delay: -4s;  --drift: 40px"></span>
+    <span style="--x: 18%; --s: 10px; --d: 32s; --delay: -18s; --drift: -30px"></span>
+    <span style="--x: 33%; --s: 16px; --d: 29s; --delay: -9s;  --drift: 50px"></span>
+    <span style="--x: 47%; --s: 11px; --d: 35s; --delay: -24s; --drift: -40px"></span>
+    <span style="--x: 61%; --s: 15px; --d: 27s; --delay: -14s; --drift: 30px"></span>
+    <span style="--x: 74%; --s: 10px; --d: 33s; --delay: -2s;  --drift: -50px"></span>
+    <span style="--x: 86%; --s: 13px; --d: 30s; --delay: -20s; --drift: 35px"></span>
+    <span style="--x: 94%; --s: 11px; --d: 36s; --delay: -11s; --drift: -25px"></span>
+  </div>
+
+  <!-- Shown only if you open index.html by double-clicking it (see README in Phase 5) -->
+  <div id="file-warning" class="file-warning" role="alert" hidden>
+    This page needs a local server to run. In VS Code, install the "Live Server" extension,
+    right-click <strong>index.html</strong>, and choose "Open with Live Server".
+  </div>
+
+  <noscript>
+    <p class="file-warning">This page needs JavaScript to work. Please turn it on in your browser.</p>
+  </noscript>
+
+  <main id="main">
+
+    <!-- ============ STAGE 1: WELCOME ============ -->
+    <section class="stage" id="stage-welcome" data-stage="welcome" aria-labelledby="welcome-title">
+      <div class="paper paper--welcome">
+        <p class="handwritten">a little something, just for you</p>
+        <h1 id="welcome-title" tabindex="-1">For <span data-recipient>Jazlee</span>, with love.</h1>
+        <p class="lead">Before you open these memories, let's see how well you remember our little world.</p>
+        <button type="button" class="btn" data-goto="quiz">Start</button>
+      </div>
+    </section>
+
+    <!-- ============ STAGE 1b: QUIZ ============ -->
+    <section class="stage" id="stage-quiz" data-stage="quiz" aria-labelledby="quiz-title" hidden>
+      <div class="quiz">
+        <header class="quiz__header">
+          <h1 id="quiz-title" class="handwritten-title" tabindex="-1">Our little world</h1>
+          <p class="lead">Five small questions. Take your time, and try again as often as you like.</p>
+          <div class="progress">
+            <p id="quiz-progress" class="progress__label">0 of 5 remembered</p>
+            <div class="progress__track" aria-hidden="true">
+              <div id="quiz-progress-bar" class="progress__bar"></div>
+            </div>
+          </div>
+        </header>
+
+        <!-- The five question cards are built by js/quiz.js -->
+        <div id="quiz-list" class="quiz__list"></div>
+
+        <footer class="quiz__footer">
+          <p id="quiz-status" class="quiz__status" role="status">Answer all five to continue.</p>
+          <button id="quiz-continue" type="button" class="btn" disabled>Continue</button>
+        </footer>
+      </div>
+    </section>
+
+    <!-- ============ STAGE 2: LETTER + SCRAPBOOK ============ -->
+    <section class="stage stage--top" id="stage-letter" data-stage="letter" aria-labelledby="letter-title" hidden>
+      <div class="letter-stage">
+
+        <article class="paper paper--letter letter">
+          <h1 id="letter-title" class="handwritten-title" tabindex="-1">A letter for you</h1>
+
+          <p class="letter__greeting">Dear <span data-recipient>Jazlee</span>,</p>
+
+          <!-- To edit the letter, change the text inside the <p> tags below. -->
+          <p>I have started this letter many times, and each time I worried that my words would not be enough. I decided to write it anyway, plainly and honestly, because you deserve the truth more than you deserve a perfect speech.</p>
+
+          <p>First, I am sorry. I made mistakes that hurt you deeply. I damaged the trust you had in me, and the trust your family had in me too. I am not saying this to make it smaller, and I am not going to offer you excuses, because there are none that would make it okay. What I did was my responsibility. It was mine, and only mine.</p>
+
+          <p>When I understood how much damage I had done, I tried to fix it. But I did not always go about it the right way, and some of my attempts created even more problems. Things I did in the hope of making it better ended up hurting you again. I am sorry for that as well. I broke your trust and I caused you pain, and I did it while you were still giving me so much.</p>
+
+          <p>That is the part I understand most clearly now. Through everything, you kept giving me your love and your support, and I did not appreciate it the way I should have. I realized many things too late, and I wish I had seen them while they were still right in front of me. I understand now how much you mean to me, and I understand how badly I handled our relationship.</p>
+
+          <p>I want to be clear about what I am not asking. I cannot demand your forgiveness, and I do not believe you owe it to me. I cannot expect you to trust me right away, either. You may be scared, and you have every reason to be careful. If you are, I would never want you to hide it or push it down for my sake. Trust is not something I get to ask for. It is something I have to earn, through honesty, patience and accountability, and by being the same person day after day, whether or not anyone is watching.</p>
+
+          <p>I want to become better, and I want to do it for real. That means taking responsibility when I am wrong instead of defending myself, telling the truth even when it is uncomfortable, and listening when you tell me how something felt. I will not promise that I will never make another mistake, because I do not want to give you a promise I cannot be sure of keeping. What I can commit to is this: when I fall short, I will own it, and I will not leave you to carry it.</p>
+
+          <p>If you are open to it, I would like to ask for another chance. I am not asking because I expect the past to disappear. It will not, and I do not want us to pretend it never happened. I am asking because I hope that, if you truly want it too, we can learn from what went wrong and begin a new chapter that is healthier than the last one. I want to love you again and to feel your love again, but only if that is something you genuinely want, and only at a pace that feels safe for you.</p>
+
+          <p>Please take as much time as you need. Whatever you decide, I will respect it. If your answer is no, I will understand, and I will still be grateful that you took the time to read this.</p>
+
+          <p class="letter__last">Thank you for reading.</p>
+          <!-- To add a closing line or your name, add another <p> right here. -->
+        </article>
+
+        <section class="scrapbook" aria-labelledby="gallery-title">
+          <h2 id="gallery-title" class="handwritten-title">Our memories</h2>
+          <p class="lead">Tap any photo to see it bigger.</p>
+          <!-- The photo cards are built by js/gallery.js from js/photos.js -->
+          <ul id="gallery" class="gallery"></ul>
+        </section>
+
+        <div class="letter-stage__next">
+          <p class="lead">Take all the time you need. When you are ready, there is one last page.</p>
+          <button type="button" class="btn" data-goto="question">Continue</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ STAGE 3: THE QUESTION ============ -->
+    <section class="stage" id="stage-question" data-stage="question" aria-labelledby="question-title" hidden>
+      <div class="paper paper--question">
+        <p class="handwritten">one last page</p>
+        <h1 id="question-title" class="question-title" tabindex="-1">Would you be willing to give us another chance?</h1>
+        <p class="lead">I'm not asking you to forget what happened or to trust me immediately. I'm asking whether you would be open to seeing if we can build something better, one honest step at a time.</p>
+
+        <!-- Both buttons are identical in size and always enabled. -->
+        <div id="choices" class="choices" role="group" aria-labelledby="question-title">
+          <button type="button" class="btn btn--choice" data-choice="yes" aria-pressed="false">Yes, let's try again.</button>
+          <button type="button" class="btn btn--choice btn--choice-no" data-choice="no" aria-pressed="false">No, I don't want to.</button>
+        </div>
+
+        <div id="response-panel" class="response" hidden>
+          <p id="choice-message" class="response__message" role="status"></p>
+
+          <form id="response-form" class="response__form" novalidate>
+            <p class="response__selected">Your answer: <strong id="selected-choice"></strong></p>
+
+            <label for="response-text" class="response__label">
+              Add a message, if you'd like <span class="response__optional">(optional)</span>
+            </label>
+            <textarea id="response-text" class="field field--area" rows="5" maxlength="2000"
+                      aria-describedby="response-hint"></textarea>
+            <p id="response-hint" class="response__hint">You can leave this empty. Your answer is not sent until you press Submit Response.</p>
+
+            <!-- Hidden trap for simple bots. People never see or use it. -->
+            <div class="honeypot" aria-hidden="true">
+              <label>Leave this empty <input id="response-website" type="text" tabindex="-1" autocomplete="off"></label>
+            </div>
+
+            <p id="response-feedback" class="response__feedback" role="status"></p>
+            <button id="response-submit" type="submit" class="btn">Submit Response</button>
+          </form>
+
+          <p id="response-sent" class="response__sent" role="status" tabindex="-1" hidden>
+            Your response has been sent. Thank you.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ MUSIC DOCK (stays on screen across stages) ============ -->
+  <aside id="music-dock" class="music-dock" aria-label="Background music" hidden>
+    <div class="music-dock__row">
+      <button id="music-toggle" type="button" class="music-dock__button" data-state="paused"
+              aria-label="Play music" disabled>
+        <svg class="icon icon--play" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5v14l11-7z"/></svg>
+        <svg class="icon icon--pause" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+      </button>
+      <div class="music-dock__text">
+        <p class="music-dock__title"><span id="music-title">14</span> <span id="music-artist" class="music-dock__artist">Silent Sanctuary</span></p>
+        <p id="music-status" class="music-dock__status" role="status">Loading music...</p>
+      </div>
+      <span class="eq" aria-hidden="true"><i></i><i></i><i></i></span>
+      <button id="music-embed-toggle" type="button" class="music-dock__more"
+              aria-expanded="false" aria-controls="music-embed" aria-label="Show Spotify player">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 10l5 5 5-5z"/></svg>
+      </button>
+    </div>
+    <div id="music-embed" class="music-dock__embed is-tucked">
+      <div id="spotify-embed-target"></div>
+      <p class="music-dock__tip">Tip: sign in to Spotify in this browser to hear the whole song. Without signing in, Spotify plays a short preview.</p>
+    </div>
+  </aside>
+
+  <!-- ============ PHOTO LIGHTBOX ============ -->
+  <dialog id="lightbox" class="lightbox" aria-label="Photo viewer">
+    <div class="lightbox__inner">
+      <button type="button" class="lightbox__close" aria-label="Close photo viewer">&times;</button>
+      <figure class="lightbox__figure">
+        <img id="lightbox-img" class="lightbox__img" alt="">
+        <figcaption id="lightbox-caption" class="lightbox__caption"></figcaption>
+      </figure>
+      <div class="lightbox__nav">
+        <button type="button" id="lightbox-prev" class="lightbox__arrow" aria-label="Previous photo">&#8249;</button>
+        <p id="lightbox-count" class="lightbox__count" aria-live="polite"></p>
+        <button type="button" id="lightbox-next" class="lightbox__arrow" aria-label="Next photo">&#8250;</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script>
+    // Plain (non-module) script so it still runs when modules are blocked.
+    if (location.protocol === "file:") document.getElementById("file-warning").hidden = false;
+  </script>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

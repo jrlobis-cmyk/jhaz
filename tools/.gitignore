@@ -1,0 +1,9 @@
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Keep your untouched original photos out of the website repository
+PHOTOS-originals/
+
+# Python cache from tools/
+__pycache__/
